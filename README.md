@@ -1,6 +1,6 @@
 # tamara-fb-bot
 
-This TechVilllage Assistance Bot 
+This Villlage Co-Working Assistance Bot 
 ![DeveloperPrince](https://developerprince.herokuapp.com/static/assets/images/logo.png)
 
 This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
