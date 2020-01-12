@@ -4,6 +4,7 @@
 from botbuilder.core import ActivityHandler, TurnContext
 from botbuilder.schema import ChannelAccount
 import re
+import space as space
 
 class MyBot(ActivityHandler):
     # See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
@@ -11,13 +12,14 @@ class MyBot(ActivityHandler):
     async def on_message_activity(self, turn_context: TurnContext):
         message = turn_context.activity.text
         if (message.lower() == 'help' or message.lower() == 'enquire'):
-            await turn_context.send_activity(f"Ok this what I can assist you with \n 1. Space \n 2. Our Communuity")
+            await turn_context.send_activity('Ok this what I can assist you with \n 1. Space \n 2. Our Communuity')
         elif (message.lower() == 'space'):
-            await turn_context.send_activity(f"For Co-Working Spaces the following is available: \n 1. Basic Membership which is ZW 250 monthly")
+            basic_space = space.basic_space()
+            await turn_context.send_activity('For Co-Working Spaces the following is available: \n 1. %s which costs %s' % (str(basic_space['title']), str(basic_space['cost'])))
         elif (re.search('thanks', message.lower())):
-            await turn_context.send_activity(f"You welcome ")
+            await turn_context.send_activity('You welcome ')
         else:
-            await turn_context.send_activity(f'OK, sorry I could not get that try texting "help" or "enquire"')
+            await turn_context.send_activity('OK, sorry I could not get that try texting "help" or "enquire"')
 
     async def on_members_added_activity(
         self,
