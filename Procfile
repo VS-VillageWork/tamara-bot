@@ -1,0 +1,1 @@
+web: gunicorn tamara-bot --preload
