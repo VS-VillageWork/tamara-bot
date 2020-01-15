@@ -8,7 +8,7 @@ dotenv_path = os.path.join(APP_ROOT, '.env')
 load_dotenv(dotenv_path)
 
 
-mongo_url = os.getenv('MONGO_URL')
+mongo_url = os.getenv('MONGODB_URI')
 client = MongoClient(mongo_url)
 db = client['villagecontent']
 
