@@ -5,19 +5,26 @@ from botbuilder.core import ActivityHandler, TurnContext
 from botbuilder.schema import ChannelAccount
 import re
 import library.space.main as space
+import library.vines.main as vines
 
 class MyBot(ActivityHandler):
     # See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
 
     async def on_message_activity(self, turn_context: TurnContext):
         message = turn_context.activity.text
-        if (re.search('help', message.lower()) or re.search('enquire', message.lower())):
-            await turn_context.send_activity('Ok this what I can assist you with \n\n **1. Co-Working Packages** \n\n **2. Our Communuity** \n\n **3. Book Meeting Room** \n\n **4. Logging complaints**')
+        if (re.search('help', message.lower()) or re.search('enquire', message.lower()) or re.search('menu', message.lower() or re.search('options', message.lower()))):
+            await turn_context.send_activity('Ok this what I can assist you with \n\n **1. Co-Working Packages** \n\n **2. Vines and its Units** \n\n **3. Book Meeting Room** \n\n **4. Logging complaints**')
         elif (re.search('co-working', message.lower()) or re.search('space', message.lower()) or re.search('packages', message.lower())):
             coworking = space.coworking()
             reply = ''
             for package in coworking:
                 reply = reply + '* **%s**, \n\nwhich costs ***%s***. \n\nThe Benfits are follows: \n\n *%s* \n\n\n\n' % (str(package['package']), str(package['cost']), str(package['benefit']))
+            await turn_context.send_activity(reply)
+        elif (re.search('units', message.lower()) or re.search('vines', message.lower()) or re.search('vine', message.lower())):
+            vns = vines.vines()
+            reply = ''
+            for vine in vns:
+                reply = reply + '* **%s** \n\n*%s*\n\n' % (str(vine['title']), str(vine['brief']))
             await turn_context.send_activity(reply)
         elif (re.search('thanks', message.lower()) or (re.search('thank', message.lower()))):
             await turn_context.send_activity('You welcome \U0001F60A')
