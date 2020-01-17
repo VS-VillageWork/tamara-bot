@@ -23,6 +23,10 @@ This sample **requires** prerequisites in order to run.
 - Run `python -m venv dev`
 - Run `source dev/bin/activate`
 
+or 
+
+- Run `dev\Script\activate.bat`
+
 ## Running the sample
 - Run `pip install -r requirements.txt` to install all dependencies
 - Run `python app.py`
