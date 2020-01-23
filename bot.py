@@ -35,7 +35,7 @@ class MyBot(ActivityHandler):
                 else:
                     await turn_context.send_activity('Seems username exists')
                 
-        elif( re.search('username', message.lower()) and re.search('secret', message.lower())):
+        elif ( re.search('username', message.lower()) and re.search('secret', message.lower())):
             userdata = message.split(' ')
             username = userdata[6]
             password = userdata[7]
