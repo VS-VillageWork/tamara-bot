@@ -2,7 +2,7 @@ import library.space.main as space
 import unittest
 
 
-class SpaceTest(unittest.TesCase):
+class SpaceTest(unittest.TestCase):
     def test_coworking(self):
         pass
 
