@@ -4,6 +4,7 @@
 import sys
 import traceback
 from datetime import datetime
+import os
 
 from aiohttp import web
 from aiohttp.web import Request, Response, json_response
@@ -86,7 +87,7 @@ APP.router.add_post("/api/messages", messages)
 
 def app():
     try:
-        web.run_app(APP, host="localhost", port=CONFIG.PORT)
+        web.run_app(APP, host=os.environ.get("HOST", "localhost"), port=CONFIG.PORT)
     except Exception as error:
         raise error
 
