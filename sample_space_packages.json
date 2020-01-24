@@ -1,0 +1,27 @@
+[ 
+    { 
+       "package":"Day Pass",
+       "benefits":"Access to Connect the Virtual Network, Shared Working Space, Meeting Room Access (1 hours per week), Wi-Fi 1 gig",
+       "cost":"$25.00/day"
+    },
+    { 
+       "package":"Virtual Offices",
+       "benefits":"Access to Connect the Virtual Network, Meeting Room Access, Wi-Fi 4 gig, discount on events, physical and postal address, courier pick up",
+       "cost":"$106.00/month"
+    },
+    { 
+       "package":"Basic Membership",
+       "benefits":"Access to Connect the Virtual Network, Shared Working Space, Meeting Room Access (2 hours per week), Wi-Fi 15 gig, discount on events",
+       "cost":"$215.00/month"
+    },
+    { 
+       "package":"Freedom Membership",
+       "benefits":"Access to Connect the Virtual Network, Shared Working Space, Meeting Room Access (3 hours per week), Wi-Fi 20 gig, discount on events",
+       "cost":"$90.00/week, $340/month"
+    },
+    { 
+       "package":"Start-up Membership",
+       "benefits":"Access to Connect the Virtual Network, Shared Working Space, Meeting Room Access (4 hours per week), Wi-Fi 20 gig, discount on events",
+       "cost":"$540.00/month"
+    }
+ ]
