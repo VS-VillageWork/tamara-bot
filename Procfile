@@ -1,1 +1,1 @@
-web: gunicorn tamara-bot:app --preload
+web: gunicorn app:app --preload
