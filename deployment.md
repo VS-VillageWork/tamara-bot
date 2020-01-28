@@ -34,7 +34,7 @@ ExecStart=/tamara-bot/dev/bin/gunicorn --workers 3 'app:app()' --preload
 
 [Install]
 WantedBy=multi-user.target
-```bash
+```
 
 ```bash
 sudo systemctl start tamara-bot
