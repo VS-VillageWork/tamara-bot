@@ -29,12 +29,12 @@ After=network.target
 User=user
 Group=nginx
 WorkingDirectory=/tamara-bot
-Environment="PATH=/tamara-bot/bin"
-ExecStart=/home/user/myproject/myprojectenv/bin/gunicorn --workers 3 'app:app()' --preload
+Environment="PATH=/tamara-bot/dev/bin"
+ExecStart=/tamara-bot/dev/bin/gunicorn --workers 3 'app:app()' --preload
 
 [Install]
 WantedBy=multi-user.target
-```bash
+```
 
 ```bash
 sudo systemctl start tamara-bot
