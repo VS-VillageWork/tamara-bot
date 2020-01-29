@@ -20,7 +20,7 @@ sudo vi /etc/systemd/system/tamara-bot.service
 
 
 ```bash
-[Unit]
+
 [Unit]
 Description=Gunicorn instance to serve tamara bot
 After=network.target
