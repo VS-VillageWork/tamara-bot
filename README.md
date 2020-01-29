@@ -1,10 +1,10 @@
-# tamara-fb-bot
+# TAMARA BOT
 
 ![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock2.png)
 
 This Villlage Co-Working Assistance Bot 
 
-# Major Contributors:
+## Contributors:
 
 DeveloperPrince
 
