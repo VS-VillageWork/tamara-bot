@@ -1,5 +1,7 @@
 # Production Deployment
 
+![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock3.png)
+
 ### Login in CentOS server contact admin for access
 
 ## Create a Systemd Unit File

@@ -1,6 +1,6 @@
 # tamara-fb-bot
 
-![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock.png)
+![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock2.png)
 
 This Villlage Co-Working Assistance Bot 
 

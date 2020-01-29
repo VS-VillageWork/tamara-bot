@@ -1,5 +1,7 @@
 # Test Document
 
+![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock.png)
+
 This is documentation for Testers those who are assigned to test the bot
 
 Download [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator/releases) and Install 
