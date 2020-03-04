@@ -1,6 +1,50 @@
 # Production Deployment
 
+![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock3.png)
+
 ### Login in CentOS server contact admin for access
+
+## Set Up Project
+
+Pull project in `/var/www` folder 
+
+```bash
+cd /var/www && git pull https://github.com/VS-VillageWork/tamara-bot.git
+```
+change directory into tamara-bot
+
+```bash
+cd tamara-bot 
+```
+
+create Virtual Enviroment in bot and install requirements.txt
+
+```bash
+python3 -m venv dev
+```
+activate Virtual Environment
+
+```bash
+dev/bin/activate
+```
+
+Install requirements
+
+```bash
+pip install -r requirements.txt
+```
+## Test 
+
+```bash 
+cd ~
+```
+
+```bash
+cd /var/www/tamara-bot && ./dev/bin/gunicorn --bind 0.0.0.0:7000 wsgi
+```
+
+Test with bot emulator using the IP address :7000 test with end point `api/messages`
+
 
 ## Create a Systemd Unit File
 
@@ -20,7 +64,7 @@ sudo vi /etc/systemd/system/tamara-bot.service
 
 
 ```bash
-[Unit]
+
 [Unit]
 Description=Gunicorn instance to serve tamara bot
 After=network.target
@@ -28,13 +72,13 @@ After=network.target
 [Service]
 User=user
 Group=nginx
-WorkingDirectory=/tamara-bot
-Environment="PATH=/tamara-bot/bin"
-ExecStart=/home/user/myproject/myprojectenv/bin/gunicorn --workers 3 'app:app()' --preload
-
+Environment=MONGODB_URI=mongodb://localhost:27017
+Environment=MICROSOFT_APP_PASSWORD=""
+Environment=MICROSOFT_APP_ID=""
+ExecStart=/bin/sh -c 'cd /var/www/tamara-bot && ./dev/bin/gunicorn --workers 5 --bind unix:tamarabot.sock -m 007 wsgi'
 [Install]
 WantedBy=multi-user.target
-```bash
+```
 
 ```bash
 sudo systemctl start tamara-bot
@@ -84,12 +128,12 @@ server {
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_pass http://unix:/home/user/myproject/myproject.sock;
+        proxy_pass http://unix:/home/user/tamara-bot/tamarabot.sock;
     }
-}
 ```
 
 Save and close the file when you are finished.
+}
 
 The nginx user must have access to our application directory in order to access the socket file there. By default, CentOS locks down each user’s home directory very restrictively, so we will add the nginx user to our user’s group so that we can then open up the minimum permissions necessary to grant access.
 
@@ -117,3 +161,8 @@ If this returns without indicating any issues, we can start and enable the Nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
+## Contributors
+
+DeveloperPrince
+
+![DeveloperPrince](https://developerprince.herokuapp.com/static/assets/images/logo.png)

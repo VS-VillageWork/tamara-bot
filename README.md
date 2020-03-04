@@ -1,10 +1,10 @@
-# tamara-fb-bot
+# TAMARA BOT
 
-![VillageWork](https://www.google.com/imgres?imgurl=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1152960796424642561%2FJNzuDGfV_400x400.png&imgrefurl=https%3A%2F%2Ftwitter.com%2FVillageWorkZW%2Fstatus%2F1179664911133270016&tbnid=Kt2S6bPsXXxXpM&vet=12ahUKEwiOwafjnP7mAhVx1uAKHWcNAF0QMygBegUIARDOAQ..i&docid=_8aBzbf01v8eAM&w=400&h=400&itg=1&q=techvillage%20villagework&ved=2ahUKEwiOwafjnP7mAhVx1uAKHWcNAF0QMygBegUIARDOAQ)
+![Tamarabot](https://github.com/VS-VillageWork/tamara-bot/blob/master/mock2.png)
 
 This Villlage Co-Working Assistance Bot 
 
-# Major Contributors:
+## Contributors:
 
 DeveloperPrince
 

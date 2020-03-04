@@ -25,10 +25,10 @@ class MyBot(ActivityHandler):
             await turn_context.send_activity(reply)
         elif (re.search('register', message.lower()) and re.search('information', message.lower())):
             userdata = message.split(' ')
-            username = userdata[3]
-            password = userdata[4]
-            if (len(userdata) > 5):
-                await turn_context.send_activity('It seems like you had **spaces** in your **password**\n\nTry this format\n\n"**My Register Information** ***johndlamini*** ***jd2020***"')
+            username = userdata[4]
+            password = userdata[5]
+            if (len(userdata) > 6):
+                await turn_context.send_activity('It seems like you had **spaces** in your **password**\n\nTry this format\n\n"**My Register Information** **is** ***johndlamini*** ***jd2020***"')
             else:
                 if (users.regusers(username, password) == True):
                     await turn_context.send_activity('Great I have registered you\U0001F60A\n\nPlease enter your username and password in this format:\n\n"**My username and secret password is** **johndlamini** ***jd2020***"')
@@ -42,9 +42,9 @@ class MyBot(ActivityHandler):
             if (users.login(username, password) == True):
                 await turn_context.send_activity('Ok now that we know each other How may I help type **Menu**  ')
             else:
-                await turn_context.send_activity('Sorry I do not seem to recognize you try again or register with again`\n\nUse this format\n\n"**My Register Information** ***johndlamini*** ***jd2020***"')
+                await turn_context.send_activity('Sorry I do not seem to recognize you try again or register with again`\n\nUse this format\n\n"**My Register Information** **is** ***johndlamini*** ***jd2020***"')
         elif (re.search('first time', message.lower()) or re.search('yes', message.lower())):
-            await (turn_context.send_activity('Please give me your username and password.\n\nPlease make sure there is a space between you password and username taking note there are no spaces within your password\n\nUse this format:\n\n"**My Register Information** ***johndlamini*** ***jd2020***"'))
+            await (turn_context.send_activity('Please give me your username and password.\n\nPlease make sure there is a space between you password and username taking note there are no spaces within your password\n\nUse this format:\n\n"**My Register Information** **is** ***johndlamini*** ***jd2020***"'))
         elif (re.search('units', message.lower()) or re.search('vines', message.lower()) or re.search('vine', message.lower())):
             vns = vines.vines()
             reply = ''
