@@ -35,6 +35,14 @@ or
 
 Please take note don't use with python 3.8 
 
+## Database Migration
+
+- Open CMD or bash and cd directory to Tamarabot project 
+- Run *mongorestore* (it will restore the database from dump file)
+
+**Note** To back database run *mongodump*
+
+
 ## Testing the bot using Bot Framework Emulator
 
 [Bot Framework Emulator](https://github.com/microsoft/botframework-emulator) is a desktop application that allows bot developers to test and debug their bots on localhost or running remotely through a tunnel.
