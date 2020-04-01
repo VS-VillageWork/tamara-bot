@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"villagecontent.users"}],"uuid":"9e0da42e4dd549248572742fad0e10c3"}
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"villagecontent.users"}],"uuid":"1466c8ab8c744ea8a4af3ed2f52c02e2"}
