@@ -6,7 +6,7 @@ attrs==19.3.0
 botbuilder-core==4.7.0
 botbuilder-schema==4.7.0
 botframework-connector==4.7.0
-certifi==2019.11.28
+certifi==2022.12.7
 cffi==1.13.2
 chardet==3.0.4
 cryptography==2.8
